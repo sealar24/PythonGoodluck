@@ -1,0 +1,47 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.grid-Container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    
+}
+.grid-Item {
+    padding: 1rem;
+    margin: 0.5rem;
+    height: 100%;/*height fijo para que tos los fieldset tengan el mismo tamaño en el contenedor*/
+}
+.grid-Item > div, .grid-Item > ul {
+    margin-bottom: 10px;
+}
+.texto {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+#pago, #desSemana , #desMeses, #totalFinal, #totaldesc {
+  display: none;
+}
+
+ /* Media query para pantallas medianas */
+ @media screen and (max-width: 1024px) {
+    .grid-Container {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Media query para pantallas pequeñas */
+  @media screen and (max-width: 768px) {
+    .grid-Container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+
