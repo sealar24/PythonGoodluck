@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "promociones.html": "Promociones",
         "trabajos.html": "Trabajos",
         "contactos.html": "Contactos",
-        "e-comers.html": "Ventas"
+        "/comercio/e-comers.html": "Ventas"
     };
 
     const currentPage = window.location.pathname.split("/").pop() || "index.html";

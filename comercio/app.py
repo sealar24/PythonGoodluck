@@ -101,12 +101,12 @@ catalogo = Catalogo(host='127.0.0.1', user='root', password='', database='goodlu
 # Carpeta para guardar las imagenes
 ruta_destino = './static/imagenes/'
 
-@app.route("./productos", methods=["GET"])
+@app.route("/productos", methods=["GET"])
 def listar_productos():
     productos = catalogo.listar_productos()
     return jsonify(productos)
 
-@app.route("./productos/<int:codigo>", methods=["GET"])
+@app.route("/productos/<int:codigo>", methods=["GET"])
 def mostrar_producto(codigo):
     producto = catalogo.consultar_producto(codigo)
     if producto:
@@ -114,7 +114,7 @@ def mostrar_producto(codigo):
     else:
         return "Producto no encontrado", 404
 
-@app.route("./productos", methods=["POST"])
+@app.route("/productos", methods=["POST"])
 def agregar_producto():
     #Recojo los datos del form
     descripcion = request.form['descripcion']
